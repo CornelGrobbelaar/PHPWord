@@ -234,4 +234,24 @@ class TextBox extends Image
     {
         return $this->borderColor;
     }
+
+    /**
+     * Set fill color.
+     *
+     * @param string $value
+     */
+    public function setFillColor($value = null)
+    {
+        $this->fillColor = $value;
+    }
+
+    /**
+     * Get fill color
+     *
+     * @return string
+     */
+    public function getFillColor()
+    {
+        return $this->fillColor;
+    }
 }

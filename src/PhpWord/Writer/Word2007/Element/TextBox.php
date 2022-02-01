@@ -50,6 +50,10 @@ class TextBox extends Image
         $xmlWriter->startElement('v:shape');
         $xmlWriter->writeAttribute('type', '#_x0000_t0202');
 
+        if($style->getFillColor()) {
+            $xmlWriter->writeAttribute('fillcolor', $style->getFillColor());
+        }
+
         $styleWriter->write();
         $styleWriter->writeBorder();
 

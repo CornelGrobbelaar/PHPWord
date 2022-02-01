@@ -83,7 +83,7 @@ abstract class AbstractContainer extends AbstractElement
             'Text', 'TextRun', 'Bookmark', 'Link', 'PreserveText', 'TextBreak',
             'ListItem', 'ListItemRun', 'Table', 'Image', 'Object', 'OLEObject',
             'Footnote', 'Endnote', 'CheckBox', 'TextBox', 'Field',
-            'Line', 'Shape', 'Title', 'TOC', 'PageBreak',
+            'Line', 'Shape', 'Title', 'TOC', 'PageBreak', 'ColumnBreak',
             'Chart', 'FormField', 'SDT', 'Comment',
         );
         $functions = array();
@@ -249,6 +249,7 @@ abstract class AbstractContainer extends AbstractElement
             'Title'         => array('Section', 'Cell'),
             'TOC'           => array('Section'),
             'PageBreak'     => array('Section'),
+            'ColumnBreak'   => array('Section'),
             'Chart'         => array('Section', 'Cell'),
         );
 
