@@ -67,6 +67,13 @@ class TextBox extends Image
     private $borderColor;
 
     /**
+     * fill color
+     *
+     * @var string
+     */
+    private $fillColor;
+
+    /**
      * Set margin top.
      *
      * @param int $value
