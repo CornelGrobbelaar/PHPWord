@@ -373,6 +373,12 @@ class Chart extends AbstractPart
 
         if (isset($this->options['axes'])) {
             $xmlWriter->writeElementBlock('c:delete', 'val', 0);
+            
+            //Support for number format
+            if($style->getNumberFormat() != null) {
+                $xmlWriter->writeElementBlock('c:numFmt', ['formatCode' => $style->getNumberFormat(), 'sourceLinked' => '0']);
+            }
+
             $xmlWriter->writeElementBlock('c:majorTickMark', 'val', $style->getMajorTickPosition());
             $xmlWriter->writeElementBlock('c:minorTickMark', 'val', 'none');
             if ($style->showAxisLabels()) {

@@ -149,6 +149,11 @@ class Chart extends AbstractStyle
     private $gridX = false;
 
     /**
+     * Define number format
+     */
+    private $numberFormat = null;
+
+    /**
      * Create a new instance
      *
      * @param array $style
@@ -531,6 +536,31 @@ class Chart extends AbstractStyle
     public function setShowGridX($value = true)
     {
         $this->gridX = $this->setBoolVal($value, $this->gridX);
+
+        return $this;
+    }
+
+    /**
+     * Set number format
+     */
+    public function setNumberFormat($value) {
+        $this->numberFormat = $value;
+
+        return $this;
+    }
+
+    public function getNumberFormat() {
+        return $this->numberFormat;
+    }
+
+    public function setCurrencyFormat() {
+        $this->setNumberFormat('"$"#,##0.00_);\("$"#,##0.00\)');
+
+        return $this;
+    }
+
+    public function setPercentFormat() {
+        $this->setNumberFormat('#,##0.00"%"');
 
         return $this;
     }
